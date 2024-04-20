@@ -1,0 +1,22 @@
+<%- include('partials/header.ejs'); -%>
+<h1>BOOKS</h1>
+<div>
+    <% for( let book of bookList){ %>
+        <p><%= book.id %>. <%= book.title %> written by <%= book.author %></p>
+        <form action="/detail" method="post">
+            <input type="submit" name="detail" value="detail<%= book.id %>">
+        </form>
+        
+        <% } %>
+        
+    </div>
+<br>
+    <div>
+        <form action="/add" method="post">
+        <input type="submit" name="add" value="add">
+    </form>
+</div>
+    
+<br>
+    
+    <%- include('partials/footer.ejs'); -%>

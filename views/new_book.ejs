@@ -1,0 +1,15 @@
+<%- include('partials/header.ejs'); -%>
+
+<form action="/submit" method="post">
+    <p>enter the title:</p>
+    <input type="text" name="title">
+    <p>enter the author name:</p>
+    <input type="text" name="author">
+    <p>enter the feature 1:</p>
+    <input type="text" name ="key1">
+    <p>enter the feature 2:</p>
+    <input type="text" name ="key2">
+    <input type="submit" name="submit" value="submit">
+</form>
+    <br>
+<%- include('partials/footer.ejs'); -%>
